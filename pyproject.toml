@@ -11,10 +11,10 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "Andiile Andiile", email = "hello@rexlang.dev"}
+    {name = "Andile Mtolo (ToxicDeeModder)", email = "alysium.corporation.studios@gmail.com"}
 ]
 maintainers = [
-    {name = "Alysium Corp Studios"}
+    {name = "Alysium Corp Studios ZA inc"}
 ]
 keywords = ["rex", "scripting", "api", "automation", "mzansi"]
 classifiers = [
@@ -35,9 +35,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/alysiumcorp/rex-lang"
-Repository = "https://github.com/alysiumcorp/rex-lang"
-Issues = "https://github.com/alysiumcorp/rex-lang/issues"
+Homepage = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang"
+Repository = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/tree/main"
+Issues = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/issues"
 
 [project.scripts]
 rex = "rex.cli:main"
