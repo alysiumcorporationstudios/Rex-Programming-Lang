@@ -203,7 +203,7 @@ def tokenize(source: str, filename: str = "<input>") -> List[Token]:
                             continue
                         except ValueError:
                             pass
-                    chunks.append(_ESCAPES.get(nxt, nxt))
+                    chunks.append(_ESCAPES.get(nxt, "\\" + nxt))
                     i += 2
                     col += 2
                     continue

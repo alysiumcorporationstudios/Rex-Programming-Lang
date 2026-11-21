@@ -183,9 +183,10 @@ rex.show(rex.list_files("."))
     assert run(source) == ["one-two", "true", "false", '[\n  "note.txt"\n]']
 
 
-def test_read_missing_file(tmp_path):
+def test_read_missing_file(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
     with pytest.raises(RexError) as excinfo:
-        run('rex.show(rex.read("%s"))' % (tmp_path / "nope.txt"))
+        run('rex.show(rex.read("nope.txt"))')
     assert "file not found" in excinfo.value.message
 
 

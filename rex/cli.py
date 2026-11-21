@@ -293,7 +293,11 @@ def command_init(args: List[str]) -> int:
         with open(readme_path, "w", encoding="utf-8") as handle:
             handle.write(INIT_README % os.path.basename(target))
     print("created %s" % main_path)
-    print("next: rex run %s" % os.path.relpath(main_path))
+    try:
+        shown = os.path.relpath(main_path)
+    except ValueError:  # different drive on Windows
+        shown = main_path
+    print("next: rex run %s" % shown)
     return EXIT_OK
 
 

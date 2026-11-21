@@ -4,6 +4,17 @@ All notable changes to Rex are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [semantic versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Fixed
+
+- Windows: `rex init` no longer crashes when the target is on a different drive
+  than the working directory (`os.path.relpath` raises `ValueError` there).
+- Windows: unknown escape sequences in strings keep their backslash, so
+  `"C:\Users\me\file.txt"` no longer loses its separators. `\n`, `\t`, `\r`,
+  `\\`, `\"` and `\uXXXX` still translate.
+- CI now runs 3.8 and 3.9 on `ubuntu-22.04`, where prebuilt interpreters exist.
+
 ## [1.0.0] — 2026-11-21
 
 The first release with a stable language. Rex is no longer a line-by-line regex

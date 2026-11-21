@@ -78,3 +78,16 @@ def test_unclosed_bracket():
 def test_unexpected_character():
     with pytest.raises(RexSyntaxError):
         tokenize("rex.show(1) $")
+
+
+def test_unknown_escapes_keep_their_backslash():
+    """Windows paths must survive: only known escapes are translated."""
+    tokens = tokenize('rex.show("C:\\App\\Data\\main.rex")')
+    strings = [t for t in tokens if t.kind == "STRING"]
+    assert strings[0].value == "C:\\App\\Data\\main.rex"
+
+
+def test_known_escapes_still_translate():
+    tokens = tokenize('rex.show("a\\nb\\tc")')
+    strings = [t for t in tokens if t.kind == "STRING"]
+    assert strings[0].value == "a\nb\tc"
