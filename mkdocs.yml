@@ -1,0 +1,79 @@
+site_name: Rex
+site_description: A tiny, friendly scripting language for API work. Made in Mzansi.
+site_author: Andile Mtolo (Toxic Dee Modder) — Alysium Corp Studios ZA inc
+site_url: https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/
+repo_url: https://github.com/alysiumcorporationstudios/Rex-Programming-Lang
+repo_name: alysiumcorporationstudios/Rex-Programming-Lang
+edit_uri: edit/main/docs/
+copyright: MIT licensed · Made in Mzansi 🇿🇦
+
+hooks:
+  - scripts/mkdocs_hooks.py
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - "."
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Install: install.md
+  - Quick start: quickstart.md
+  - Language: language.md
+  - Standard library: stdlib.md
+  - CLI: cli.md
+  - Examples: examples.md
+  - Specification: spec.md
+  - Architecture: architecture.md
+  - Changelog: changelog.md
+  - Roadmap: roadmap.md
+  - Contributing: contributing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alysiumcorporationstudios
+      name: Alysium Corp Studios on GitHub

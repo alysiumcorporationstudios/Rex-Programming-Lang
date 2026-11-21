@@ -1,46 +1,83 @@
-
 [build-system]
 requires = ["setuptools>=61", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "rex-lang"
-version = "0.1.0"
-description = "Rex — a tiny, friendly scripting language for API work. Made in Mzansi 🇿🇦"
+version = "1.0.0"
+description = "Rex — a tiny, friendly scripting language for API work. Made in Mzansi."
 readme = "README.md"
 requires-python = ">=3.8"
-license = {text = "MIT"}
+license = { text = "MIT" }
 authors = [
-    {name = "Andile Mtolo (ToxicDeeModder)", email = "alysium.corporation.studios@gmail.com"}
+    { name = "Andile Mtolo (Toxic Dee Modder)", email = "alysium.corporation.studios@gmail.com" }
 ]
-maintainers = [
-    {name = "Alysium Corp Studios ZA inc"}
+maintainers = [{ name = "Alysium Corp Studios ZA inc" }]
+keywords = [
+    "rex", "rex-lang", "scripting", "scripting-language", "interpreter",
+    "api", "http", "automation", "cli", "dsl", "mzansi", "south-africa",
 ]
-keywords = ["rex", "scripting", "api", "automation", "mzansi"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
     "Topic :: Software Development :: Interpreters",
     "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
 ]
-dependencies = [
-    "requests>=2.28"
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.5",
+]
+docs = [
+    "mkdocs-material>=9.5",
 ]
 
 [project.urls]
-Homepage = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang"
-Repository = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/tree/main"
+Homepage = "https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/"
+Documentation = "https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/"
+Repository = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang"
 Issues = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/issues"
+Changelog = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/blob/main/CHANGELOG.md"
+Roadmap = "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/blob/main/ROADMAP.md"
 
 [project.scripts]
 rex = "rex.cli:main"
 
-[tool.setuptools.packages]
-find = {}
+[tool.setuptools]
+packages = ["rex"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+rex = ["py.typed"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py38"
+exclude = [".venv", "build", "dist", "site"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B"]
+ignore = ["E501", "B008"]
+
+[tool.coverage.run]
+source = ["rex"]

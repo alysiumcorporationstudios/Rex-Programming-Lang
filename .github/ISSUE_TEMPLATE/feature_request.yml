@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest a language feature, builtin or tool
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the script you want to write and where Rex gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would the syntax or API look like?
+      render: rex
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - language syntax
+        - standard library
+        - CLI
+        - diagnostics
+        - docs
+        - editor support
+        - performance
+    validations:
+      required: true
+  - type: checkboxes
+    id: size
+    attributes:
+      label: Keeping Rex small
+      options:
+        - label: This cannot be done with the existing language and builtins

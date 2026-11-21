@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/
+    about: Language reference, standard library, CLI and examples
+  - name: Questions and ideas
+    url: https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/discussions
+    about: Ask a question or share something you built with Rex
+  - name: Security report
+    url: https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/blob/main/SECURITY.md
+    about: Please report vulnerabilities privately, not in a public issue

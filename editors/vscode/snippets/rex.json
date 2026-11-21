@@ -1,0 +1,52 @@
+{
+  "Show": {
+    "prefix": "show",
+    "body": ["rex.show(${1:value})"],
+    "description": "Print a value"
+  },
+  "Let": {
+    "prefix": "let",
+    "body": ["rex.let ${1:name} = ${2:value}"],
+    "description": "Declare a variable"
+  },
+  "If / else": {
+    "prefix": "if",
+    "body": ["rex.if ${1:condition}", "\t$0", "rex.else", "\t", "rex.end"],
+    "description": "Conditional block"
+  },
+  "While": {
+    "prefix": "while",
+    "body": ["rex.while ${1:condition}", "\t$0", "rex.end"],
+    "description": "While loop"
+  },
+  "For": {
+    "prefix": "for",
+    "body": ["rex.for ${1:item} in ${2:items}", "\t$0", "rex.end"],
+    "description": "For loop"
+  },
+  "Function": {
+    "prefix": "func",
+    "body": ["rex.func ${1:name}(${2:args})", "\t$0", "\trex.return ${3:value}", "rex.end"],
+    "description": "Function definition"
+  },
+  "Try / catch": {
+    "prefix": "try",
+    "body": ["rex.try", "\t$0", "rex.catch ${1:err}", "\trex.show(${1:err}.message)", "rex.end"],
+    "description": "Error handling block"
+  },
+  "HTTP GET": {
+    "prefix": "get",
+    "body": ["rex.let ${1:data} = rex.get(\"${2:https://example.com/api}\")"],
+    "description": "HTTP GET with parsed JSON"
+  },
+  "HTTP POST": {
+    "prefix": "post",
+    "body": ["rex.let ${1:response} = rex.post(\"${2:https://example.com/api}\", {${3:\"key\": \"value\"}})"],
+    "description": "HTTP POST with a JSON body"
+  },
+  "Import": {
+    "prefix": "import",
+    "body": ["rex.import \"${1:lib/file.rex}\""],
+    "description": "Import another Rex file"
+  }
+}

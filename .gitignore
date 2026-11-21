@@ -1,5 +1,31 @@
-# Object file
-*.o
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
 
-# Ada Library Information
-*.ali
+# Rex scratch files
+rex_notes.txt
+*.rex.out
+
+# Docs build
+site/
+.mkdocs_cache/
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

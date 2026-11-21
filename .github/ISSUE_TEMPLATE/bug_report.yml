@@ -1,0 +1,44 @@
+name: Bug report
+description: Something in Rex does not behave as documented
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The fastest fix comes from a tiny reproduction.
+  - type: input
+    id: version
+    attributes:
+      label: Rex version
+      description: Output of `rex version`
+      placeholder: Rex 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python and OS
+      placeholder: Python 3.12 on Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Smallest program that reproduces it
+      description: The exact command and the smallest `.rex` file that shows the problem.
+      render: rex
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Paste the full rendered error, including the caret snippet.
+    validations:
+      required: true

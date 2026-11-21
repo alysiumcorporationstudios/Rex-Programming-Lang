@@ -1,0 +1,58 @@
+{
+  "name": "rex-lang",
+  "displayName": "Rex",
+  "description": "Syntax highlighting, snippets and comment support for the Rex scripting language",
+  "version": "1.0.0",
+  "publisher": "alysiumcorporationstudios",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "rex",
+    "rex-lang",
+    "scripting",
+    "api",
+    "http"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/issues"
+  },
+  "homepage": "https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/",
+  "contributes": {
+    "languages": [
+      {
+        "id": "rex",
+        "aliases": [
+          "Rex",
+          "rex"
+        ],
+        "extensions": [
+          ".rex"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rex",
+        "scopeName": "source.rex",
+        "path": "./syntaxes/rex.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "rex",
+        "path": "./snippets/rex.json"
+      }
+    ]
+  }
+}
