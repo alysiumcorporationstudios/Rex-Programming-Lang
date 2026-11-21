@@ -1,0 +1,52 @@
+/* Rex docs — a small palette drawn from the South African flag: green, gold, red. */
+
+:root {
+  --rex-green: #007a4d;
+  --rex-gold: #ffb612;
+  --rex-red: #de3831;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #00543a;
+  --md-primary-fg-color--light: #007a4d;
+  --md-primary-fg-color--dark: #003d2a;
+  --md-accent-fg-color: #b8860b;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #007a4d;
+  --md-primary-fg-color--light: #00a469;
+  --md-primary-fg-color--dark: #00543a;
+  --md-accent-fg-color: #ffb612;
+}
+
+.md-typeset h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  border-bottom: 2px solid var(--rex-gold);
+  padding-bottom: 0.2rem;
+}
+
+.md-typeset code {
+  font-feature-settings: "calt" 0;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: rgba(0, 122, 77, 0.12);
+}
+
+.md-typeset blockquote {
+  border-left: 4px solid var(--rex-gold);
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+/* Make inline code in tables a little tighter */
+.md-typeset table:not([class]) code {
+  white-space: nowrap;
+}
