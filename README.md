@@ -9,10 +9,10 @@ Made in Mzansi. Built for developers who just want to fetch data and print it.
 
 [![CI](https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/actions/workflows/ci.yml/badge.svg)](https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/actions/workflows/ci.yml)
 [![Docs](https://img.shields.io/badge/docs-live-brightgreen)](https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/)
-[![Version](https://img.shields.io/badge/version-1.0.0-orange)](https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/releases)
+[![Version](https://img.shields.io/badge/version-1.0.1-orange)](https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/releases)
 [![Python](https://img.shields.io/badge/python-3.8%20%7C%203.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-203%20passing-brightgreen)](tests)
+[![Tests](https://img.shields.io/badge/tests-205%20passing-brightgreen)](tests)
 
 [Documentation](https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/) ·
 [Quick start](https://alysiumcorporationstudios.github.io/Rex-Programming-Lang/quickstart/) ·
@@ -212,7 +212,7 @@ scripts/        docs and asset generators
 ## Quality
 
 ```bash
-make test    # pytest — 203 passing
+make test    # pytest — 205 passing
 make lint    # ruff — clean
 make check   # rex check on every example
 make docs    # serve the documentation locally

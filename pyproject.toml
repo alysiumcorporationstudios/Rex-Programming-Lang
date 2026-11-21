@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rex-lang"
-version = "1.0.0"
+version = "1.0.1"
 description = "Rex — a tiny, friendly scripting language for API work. Made in Mzansi."
 readme = "README.md"
 requires-python = ">=3.8"
