@@ -64,6 +64,13 @@ pip install rex-lang
 rex run hello.rex
 ```
 
+Until the PyPI release is live, install the built wheel straight from the release:
+
+```bash
+pip install https://github.com/alysiumcorporationstudios/Rex-Programming-Lang/releases/download/v1.0.1/rex_lang-1.0.1-py3-none-any.whl
+rex run hello.rex
+```
+
 From source:
 
 ```bash
